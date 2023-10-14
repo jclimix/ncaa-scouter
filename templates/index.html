@@ -12,8 +12,10 @@
       href="https://fonts.googleapis.com/css?family=Staatliches"
     />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches">
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Staatliches"
+    />
 
     <title>NCAA Player Scouter</title>
 
@@ -24,8 +26,8 @@
         font-family: "Gabarito", sans-serif;
         justify-content: center;
         align-items: center;
-        
-        background-image: url('https://i.ibb.co/s5kW346/NCAA-site-background-1.png');
+
+        background-image: url("https://i.ibb.co/s5kW346/NCAA-site-background-1.png");
 
         background-size: cover;
         background-repeat: no-repeat;
@@ -45,7 +47,7 @@
         flex-direction: column;
         align-items: center;
       }
-      
+
       #radio {
         text-align: center;
         margin: 20px;
@@ -53,7 +55,7 @@
         flex-direction: column;
         align-items: center;
       }
-        
+
       select {
         padding: 10px;
         width: 400px; /* Adjust the width to your preference */
@@ -63,274 +65,310 @@
         font-family: "Gabarito", sans-serif; /* Use the Gabarito font */
       }
       .radioGroupBelow label {
-            display: inline-block;
-            text-align: center;
-            margin-left: 0.8em;
-            margin-right: 5px;
-            padding-top: 0px;
-            cursor: pointer;
-            position: relative;
-        }
+        display: inline-block;
+        text-align: center;
+        margin-left: 0.8em;
+        margin-right: 5px;
+        padding-top: 0px;
+        cursor: pointer;
+        position: relative;
+      }
 
+      .radioGroupBelow label input[type="radio"] {
+        display: block;
+        margin: 0.3em;
+        padding-top: 0px;
+      }
 
+      input[type="radio"] {
+        transform: scale(2);
+        margin-right: 20px;
+      }
 
-        .radioGroupBelow label input[type="radio"] {
-            display: block;
-            margin: 0.3em;
-            padding-top: 0px;
+      .radio-label {
+        display: flex;
+        align-items: center;
+        /* Vertically align the content within each label */
+        margin-right: 20px;
+        /* Add some spacing between radio button pairs */
+      }
 
-        }
+      .radio-label input[type="radio"] {
+        -webkit-appearance: none;
+        /* Remove default appearance (circle) for webkit browsers */
+        -moz-appearance: none;
+        /* Remove default appearance (circle) for Firefox */
+        appearance: none;
+        /* Remove default appearance (circle) for other browsers */
+        width: 16px;
+        /* Set the width of the custom radio button */
+        height: 16px;
+        /* Set the height of the custom radio button */
+        border: 1px solid #007bff;
+        /* Add a border */
+        border-radius: 50%;
+        /* Make it circular */
+        margin-right: 20px;
+        /* Add some spacing between the radio button and label text */
+      }
 
-        input[type="radio"] {
-            transform: scale(2);
-            margin-right: 20px;
-        }
+      /* Style the radio button when it's checked */
 
-        .radio-label {
-            display: flex;
-            align-items: center;
-            /* Vertically align the content within each label */
-            margin-right: 20px;
-            /* Add some spacing between radio button pairs */
-        }
+      .radio-label input[type="radio"]:checked {
+        background-color: #007bff;
+        /* Fill in the circle with the selected color */
+      }
 
-        .radio-label input[type="radio"] {
-            -webkit-appearance: none;
-            /* Remove default appearance (circle) for webkit browsers */
-            -moz-appearance: none;
-            /* Remove default appearance (circle) for Firefox */
-            appearance: none;
-            /* Remove default appearance (circle) for other browsers */
-            width: 16px;
-            /* Set the width of the custom radio button */
-            height: 16px;
-            /* Set the height of the custom radio button */
-            border: 1px solid #007bff;
-            /* Add a border */
-            border-radius: 50%;
-            /* Make it circular */
-            margin-right: 20px;
-            /* Add some spacing between the radio button and label text */
-        }
+      h1 {
+        font-family: "Bebas Neue", sans-serif;
+        color: #ffffff;
+        padding: 20px 0;
+        font-size: 120px;
+        line-height: 0;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+      }
+      .background-image {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
 
-        /* Style the radio button when it's checked */
+      h2 {
+        color: rgba(255, 255, 255, 0.1);
+        margin-top: 20px;
+        font-size: 80px;
+        font-family: "Staatliches", cursive;
+        line-height: 0.2;
+        text-align: center;
+        letter-spacing: 3px;
+        -webkit-text-stroke: 2px #fff; /* White text stroke */
+        text-stroke: 2px #fff; /* White text stroke */
+      }
 
-        .radio-label input[type="radio"]:checked {
-            background-color: #007bff;
-            /* Fill in the circle with the selected color */
-        }
-        
-        h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            color: #ffffff;
-            padding: 20px 0;
-            font-size: 120px;
-            line-height: 0;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
-            
-        }
-        .background-image {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            overflow: hidden;
-        }
+      p {
+        font-size: 18px;
+        color: #333;
+        margin-top: 10px;
+        display: inline;
+      }
 
-        h2 {
-            color: rgba(255, 255, 255, 0.1);
-            margin-top: 20px;
-            font-size: 80px;
-            font-family: 'Staatliches', cursive;
-            line-height: 0.2;
-            text-align: center;
-            letter-spacing: 3px;
-            -webkit-text-stroke: 2px #fff; /* White text stroke */
-            text-stroke: 2px #fff; /* White text stroke */
-        }
+      h3 {
+        color: #333;
+        margin-top: 20px;
+        font-size: 30px;
+      }
 
+      h4 {
+        color: #007bff;
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 0.3;
+      }
 
-        p {
-            font-size: 18px;
-            color: #333;
-            margin-top: 10px;
-            display: inline;
-        }
+      h5 {
+        color: #333;
+        margin-top: 18px;
+        font-size: 23px;
+        line-height: 0.1;
+        letter-spacing: 0.4px;
+        font-family: "Reem Kufi", cursive;
+      }
+      h6 {
+        color: #333;
+        margin-top: 9px;
+        margin-bottom: 28px;
+        font-size: 26px;
+        line-height: 0;
+        letter-spacing: 0.4px;
+        font-family: "Reem Kufi", cursive;
+      }
+      h7 {
+        color: #333;
+        margin-top: 9px;
+        margin-bottom: 28px;
+        margin-right: 28px;
+        font-size: 26px;
+        line-height: 0;
+        letter-spacing: 0.4px;
+        font-family: "Reem Kufi", cursive;
+      }
+      h8 {
+        color: #ffae35;
+        margin-top: 20px;
+        font-size: 52px;
+        font-family: "Lalezar", cursive;
+        line-height: 0.2;
+        text-align: center;
+        letter-spacing: 3px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
 
-        h3 {
-            color: #333;
-            margin-top: 20px;
-            font-size: 30px;
-        }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added box shadow */
+        padding: 20px;
+        width: 85%;
+        max-width: 500px;
+        margin-top: 10px;
+        margin: 0 auto;
+      }
 
-        h4 {
-            color: #007bff;
-            margin-top: 20px;
-            font-size: 24px;
-            line-height: 0.3;
-        }
+      .button-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 25px;
+        cursor: pointer;
+        font-family: "Bebas Neue", sans-serif; /* Use the font-family for h1 */
+        letter-spacing: 1px;
+        font-size: 50px; /* Adjust the font size to match h1 */
+        text-align: center;
+        font-weight: bold;
+        margin-top: 20px;
+        display: inline-block;
+        margin: 0 auto;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
 
-        h5 {
-            color: #333;
-            margin-top: 18px;
-            font-size: 23px;
-            line-height: 0.1;
-            letter-spacing: 0.4px;
-            font-family: 'Reem Kufi', cursive;
+      .stack {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .stack span {
+        font-family: "Staatliches", cursive;
+        color: #6ac8ff;
+        text-align: center;
+        font-weight: 600;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        font-size: 95px;
+        --stack-height: calc(100% / var(--stacks) - 1px);
+        --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+        --clip-top: calc(var(--stack-height) * var(--index));
+        --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+        clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+        animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+            calc(var(--index) * 120ms),
+          glitch 2s ease infinite 2s alternate-reverse;
+      }
+
+      .stack span:nth-child(odd) {
+        --glitch-translate: 8px;
+      }
+      .stack span:nth-child(even) {
+        --glitch-translate: -8px;
+      }
+
+      @keyframes stack {
+        0% {
+          opacity: 0;
+          transform: translateX(-50%);
+          text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
         }
-        h6 {
-            color: #333;
-            margin-top: 9px;
-            margin-bottom: 28px;
-            font-size: 26px;
-            line-height: 0;
-            letter-spacing: 0.4px;
-            font-family: 'Reem Kufi', cursive;
+        60% {
+          opacity: 0.5;
+          transform: translateX(50%);
         }
-        h7 {
-            color: #333;
-            margin-top: 9px;
-            margin-bottom: 28px;
-            margin-right: 28px;
-            font-size: 26px;
-            line-height: 0;
-            letter-spacing: 0.4px;
-            font-family: 'Reem Kufi', cursive;
+        80% {
+          transform: none;
+          opacity: 1;
+          text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
         }
-        h8 {
-            color: #ffae35;
-            margin-top: 20px;
-            font-size: 52px;
-            font-family: 'Lalezar', cursive;
-            line-height: 0.2;
-            text-align: center;
-            letter-spacing: 3px;
-            text-shadow: -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
+        100% {
+          text-shadow: none;
         }
-        
-        form {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background-color: rgba(255, 255, 255, 0.85);
-          border-radius: 20px;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added box shadow */
-          padding: 20px;
-          width: 85%;
-          max-width: 500px;
-          margin-top: 10px;
-          margin: 0 auto;
+      }
+
+      @keyframes glitch {
+        0% {
+          text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+          transform: translate(var(--glitch-translate));
         }
-        
-        .button-container {
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+        2% {
+          text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
         }
-        input[type="submit"] {
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 20px;
-          padding: 8px 25px;
-          cursor: pointer;
-          font-family: 'Bebas Neue', sans-serif; /* Use the font-family for h1 */
-          letter-spacing: 1px;
-          font-size: 50px; /* Adjust the font size to match h1 */
-          text-align: center;
-          font-weight: bold;
-          margin-top: 20px;
-          display: inline-block;
-          margin: 0 auto;
+        4%,
+        100% {
+          text-shadow: none;
+          transform: none;
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        
-        .stack {
-          display: grid;
-          grid-template-columns: 1fr;
-          
-        }
-        
-        .stack span {
-          font-family: 'Staatliches', cursive;
-          color: #6ac8ff;
-          text-align: center;
-          font-weight: 600;
-          grid-row-start: 1;
-          grid-column-start: 1;
-          font-size: 95px;
-          --stack-height: calc(100% / var(--stacks) - 1px);
-          --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
-          --clip-top: calc(var(--stack-height) * var(--index));
-          --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
-          clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
-          animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
-        }
-        
-        .stack span:nth-child(odd) { --glitch-translate: 8px; }
-        .stack span:nth-child(even) { --glitch-translate: -8px; }
-        
-        @keyframes stack {
-          0% {
-            opacity: 0;
-            transform: translateX(-50%);
-            text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-          };
-          60% {
-            opacity: 0.5;
-            transform: translateX(50%);
-          }
-          80% {
-            transform: none;
-            opacity: 1;
-            text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-          }
-          100% {
-            text-shadow: none;
-          }
-        }
-        
-        @keyframes glitch {
-          0% {
-            text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
-            transform: translate(var(--glitch-translate));
-          }
-          2% {
-            text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
-          }
-          4%, 100% {  text-shadow: none; transform: none; }
-        }
-        
+      }
+      .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh; /* 100% of the viewport height */
+      }
+      .pdf-button {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 3px 18px;
+        border-radius: 15px;
+        border: 0px;
+        cursor: pointer;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: medium;
+        letter-spacing: px;
+        font-size: 48px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added box shadow */
+      }
+
+      /* Hover effect */
+      .pdf-button:hover {
+        background-color: #80bdff;
+        color: rgb(255, 255, 255);
+      }
     </style>
   </head>
 
   <body>
-    
     <h1>NCAA</h1>
     <div class="container">
-      <div class="stack" style="--stacks: 3;">
-        <span style="--index: 0;">Men's College Basketball</span>
-        <span style="--index: 1;">Men's College Basketball</span>
-        <span style="--index: 2;">Men's College Basketball</span>
+      <div class="stack" style="--stacks: 3">
+        <span style="--index: 0">Men's College Basketball</span>
+        <span style="--index: 1">Men's College Basketball</span>
+        <span style="--index: 2">Men's College Basketball</span>
       </div>
     </div>
     <h1>PLAYER Scouter</h1>
-    <div class="center-align-text">
+    <div class="center-align-text"></div>
+    <br />
+
+    <div class="center-container">
+      <a
+        href="https://docs.google.com/document/d/1F5zsONLA10F2i5Ox_en-c3SQvoT4_jr1HUHa1GIGNGk/edit?usp=sharing"
+        target="_blank"
+      >
+        <button class="pdf-button" type="button">Quick Guide (G-Doc)</button>
+      </a>
     </div>
-    <br>
-    
-    
+    <br />
+    <br />
+
     <form action="/" method="POST" id="myForm">
       <div id="dropdown-div">
         <label for="code">Select a player archetype:</label>
-         <br><br>
+        <br /><br />
         <select id="code" name="code">
           <option value="2WS" required>2-Way Sharpshooter</option>
           <option value="3DD">3 & D</option>
@@ -394,37 +432,36 @@
           <option value="WG">Wing God</option>
         </select>
       </div>
-      <br>
+      <br />
 
-        Select a division:
-        
-      <br>
-      <br>
+      Select a division:
+
+      <br />
+      <br />
       <label class="radio-label">
-                <input type="radio" id="division" name="division" value="d1" required/>
-                DIVISION I
-            </label>
-            <br>
+        <input type="radio" id="division" name="division" value="d1" required />
+        DIVISION I
+      </label>
+      <br />
 
-            <label class="radio-label">
-                <input type="radio" id="division" name="division" value="d2" />
-                DIVISION II
-            </label><br>
+      <label class="radio-label">
+        <input type="radio" id="division" name="division" value="d2" />
+        DIVISION II </label
+      ><br />
 
-            <label class="radio-label">
-                <input type="radio" id="division" name="division" value="d3" />
-                DIVISION III
-            </label><br>
-            
+      <label class="radio-label">
+        <input type="radio" id="division" name="division" value="d3" />
+        DIVISION III </label
+      ><br />
 
       <div class="button-container">
         <input type="submit" value="SEARCH" />
-        <br>
+        <br />
       </div>
     </form>
-    
-    <br><br>
-    
+
+    <br /><br />
+
     <script>
       // An array of background image URLs
       const backgroundImages = [
@@ -446,29 +483,27 @@
       // Call the function to set a random background when the page loads
       setRandomBackground();
     </script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/2.0.0/vibrant.min.js"></script>
 
     <script>
-        const backgroundElement = document.querySelector('.background-image');
-        const h2Element = document.getElementById('dynamic-color-text');
-        const backgroundImage = document.querySelector('.background-image img');
-    
-        // Load the image and get its main color
-        const img = new Image();
-        img.crossOrigin = "anonymous"; // Allow cross-origin image processing
-    
-        img.src = backgroundImage.getAttribute('src');
-        img.addEventListener('load', function() {
-            const vibrant = new Vibrant(img);
-            const swatch = vibrant.swatches()['Vibrant']; // 'Vibrant' is the main color swatch
-    
-            if (swatch) {
-                h2Element.style.color = swatch.getHex();
-            }
-        });
-    </script>
+      const backgroundElement = document.querySelector(".background-image");
+      const h2Element = document.getElementById("dynamic-color-text");
+      const backgroundImage = document.querySelector(".background-image img");
 
-    
+      // Load the image and get its main color
+      const img = new Image();
+      img.crossOrigin = "anonymous"; // Allow cross-origin image processing
+
+      img.src = backgroundImage.getAttribute("src");
+      img.addEventListener("load", function () {
+        const vibrant = new Vibrant(img);
+        const swatch = vibrant.swatches()["Vibrant"]; // 'Vibrant' is the main color swatch
+
+        if (swatch) {
+          h2Element.style.color = swatch.getHex();
+        }
+      });
+    </script>
   </body>
 </html>
