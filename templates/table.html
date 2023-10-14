@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Gabarito"
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue"
+      href="https://fonts.googleapis.com/css?family=Young Serif"
+      href="https://fonts.googleapis.com/css?family=Staatliches"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Staatliches"
+    />
+
+    <title>{{ arch_title }} - NCAA CMBB Scouter</title>
+
+    <!-- Include jQuery and DataTables via CDNs -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Gabarito", sans-serif;
+      }
+
+      /* Set a maximum width for the container */
+      .table-container {
+        max-width: 400px; /* Adjust this value to your preference */
+        margin: 0 auto; /* Center the container horizontally */
+      }
+
+      /* Apply some basic styles to the table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-family: "Gabarito", sans-serif; /* Apply Gabarito font */
+        border-radius: 10px; /* Add rounded edges */
+        overflow: hidden; /* Ensure the border-radius is applied properly */
+      }
+
+      /* Style the table header */
+      th {
+        background-color: #0e0e0e;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+      }
+
+      /* Style alternating table rows */
+      tr:nth-child(even) {
+        background-color: #9c9c9c; /* Slightly dark gray for even rows */
+      }
+
+      tr:nth-child(odd) {
+        background-color: white; /* White for odd rows */
+      }
+
+      /* Style table data cells */
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      /* Add hover effect on table rows */
+      tr:hover {
+        background-color: #ddd;
+      }
+      .arch-title {
+        text-align: center;
+        font-family: "Staatliches", cursive;
+        color: #4287ff;
+        font-size: 95px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+      }
+      .player-comp {
+        text-align: center;
+        font-family: "Staatliches", cursive;
+        color: #8fd6ff;
+        font-size: 95px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+      }
+      .players {
+        text-align: center;
+        font-family: "Staatliches", cursive;
+        color: #ffffff;
+        font-size: 65px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
+      }
+
+      .stack {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .stack span {
+        font-family: "Staatliches", cursive;
+        color: #ffffff;
+        text-align: center;
+        font-weight: 400;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        font-size: 65px;
+        --stack-height: calc(100% / var(--stacks) - 1px);
+        --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+        --clip-top: calc(var(--stack-height) * var(--index));
+        --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+        clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+        animation: stack 340ms cubic-bezier(0.46, 0.29, 0, 1.24) 1 backwards
+            calc(var(--index) * 120ms),
+          glitch 2s ease infinite 2s alternate-reverse;
+      }
+
+      .stack span:nth-child(odd) {
+        --glitch-translate: 8px;
+      }
+      .stack span:nth-child(even) {
+        --glitch-translate: -8px;
+      }
+
+      @keyframes stack {
+        0% {
+          opacity: 0;
+          transform: translateX(-50%);
+          text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+        }
+        60% {
+          opacity: 0.5;
+          transform: translateX(50%);
+        }
+        80% {
+          transform: none;
+          opacity: 1;
+          text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+        }
+        100% {
+          text-shadow: none;
+        }
+      }
+
+      @keyframes glitch {
+        0% {
+          text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+          transform: translate(var(--glitch-translate));
+        }
+        2% {
+          text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+        }
+        4%,
+        100% {
+          text-shadow: none;
+          transform: none;
+        }
+      }
+      table.dataTable thead .sorting_asc {
+        background-image: url("../images/integration/upArrow.gif");
+      }
+      #myTable_wrapper .dataTables_filter input {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="arch-title">{{ arch_title }}</div>
+    <br />
+    <div class="player-comp">Player Comparisons:</div>
+    <br /><br />
+    <div class="players">
+      <div class="stack" style="--stacks: 3">
+        <span style="--index: 0">{{ player_comparisons }}</span>
+        <span style="--index: 1">{{ player_comparisons }}</span>
+        <span style="--index: 2">{{ player_comparisons }}</span>
+      </div>
+    </div>
+    <br /><br />
+    {{ table_results | safe }}
+    <br /><br />
+
+    <script>
+      // Initialize DataTable for sorting
+      $(document).ready(function () {
+        $("table").DataTable();
+      });
+    </script>
+
+    <script>
+      // An array of background image URLs
+      const backgroundImages = [
+        "url('https://i.ibb.co/NnNdbM6/NCAA-site-background-5.png')",
+        // Add more image URLs as needed
+      ];
+
+      // Function to set a random background image
+      function setRandomBackground() {
+        const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+        const randomImage = backgroundImages[randomIndex];
+        document.body.style.backgroundImage = randomImage;
+      }
+
+      // Call the function to set a random background when the page loads
+      setRandomBackground();
+    </script>
+  </body>
+</html>

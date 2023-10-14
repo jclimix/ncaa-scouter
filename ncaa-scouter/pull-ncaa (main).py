@@ -527,7 +527,8 @@ for num in endpnt:
         SeE = category[z]
     z += 1
 
-print(division.upper() + " - " + archetypes[code]["Archetype Name"])
+arch_title = division.upper() + " - " + archetypes[code]["Archetype Name"]
+print(arch_title)
 print("Primary: " + PrE + " | Secondary: " + SeE)
 print(player_comps[code][0] + " | " + player_comps[code][1] + " | " + player_comps[code][2])
 
